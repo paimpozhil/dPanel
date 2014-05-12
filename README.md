@@ -1,6 +1,6 @@
 #dPanel 
 
-We are creating  a very light weight simple control panel for our own use to 100s of websites hosted on cPanel into Docker based environment.
+We are creating  a very light weight simple control panel for our own use to migrate 100s of websites hosted on cPanel into Docker based environment.
 
 Docker gets many things right where the cPanel fails.. 
 
@@ -21,7 +21,7 @@ They do not allow different websites/users to have different versions of softwar
 They take up lot of resources.
 
 
-### Tools Used:
+### Tools about to be used:
 
 #### Frontend: PHP/Mysql over Laravel.
 
@@ -37,3 +37,7 @@ They take up lot of resources.
 s3fs-fuse :  https://github.com/s3fs-fuse/s3fs-fuse
 
 
+
+## Shut up where is the code?
+
+Im coding that as we speak and I am still finalizing the technologies to be used.. Please join me if you'd like to help ( paimpozhil @ gmail dot com )
