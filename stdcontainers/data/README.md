@@ -2,7 +2,7 @@
 
 
 #### compile
-docker build -t dpanel-data .
+docker build -t dp-data .
 
 #### to start a data volume
-docker run --name data-for-wp dpanel-data
+docker run --name appdata dp-data

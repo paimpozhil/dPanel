@@ -1,5 +1,5 @@
 FROM	busybox
-VOLUME	["/var/lib/mysql","/var/log","/var/www/"]
+VOLUME	["/var/lib/mysql","/var/www/","/data","/backup"]
 CMD	["/bin/true"]
 
 
