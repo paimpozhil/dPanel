@@ -1,0 +1,22 @@
+##to setup images necessary for this
+
+cd data
+docker build -t dp-data .
+
+cd nginx
+docker build -t stdnginx .
+
+cd mysql
+docker build -t stdmysql .
+
+##to create a site
+
+docker run --name appdata dp-data
+
+docker run --volumes-from appdata -p 3306:3306  -d stdmysql /sbin/my_init 
+
+docker run  --volumes-from appdata -p 80:80  -d stdnginx /sbin/my_init 
+
+
+## to inspect
+docker run -ti --volumes-from appdata ubuntu /bin/bash
