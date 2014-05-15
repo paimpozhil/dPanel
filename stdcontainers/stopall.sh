@@ -10,5 +10,8 @@ echo "stoppping .."
 docker stop $appname-nginx
 echo "stopping .."
 docker stop $appname-utils
+echo "stopping .."
+docker stop $appname-apache
+
 
 echo "all stopped"
