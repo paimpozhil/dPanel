@@ -11,12 +11,19 @@ Idea is to :
 #### Create a tool that will allow you to migrate out of cPanel / Plesk to our Docker container environment easily.
 
 
-### Status for now -- we do not have any web panel yet. just Bash Scripts which will in future serve for API calls/base for this system.
+### Status for now -- 
 
-These scripts will let you already to create a proper setup for hosting any PHP/HTML website with Mysql backend with a Data Container for storing the persistent / Utils container for ssh / backup / any tools you would like to have. The containers are hardcoded to map the ports to the Host so right now the way it works , you can host only 1 website per server. This will change in future . You can change mapping inside the ./stdcontainers/startall.sh scripts very easily
+we do not have any web panel yet. just Bash Scripts which will in future serve for API calls/base for this system.
 
-### We have many standard Docker containers which do work independently as well and would help someone setting up apache/nginx/mysql/etc from start.
+These scripts will let you to create a proper docker setup for hosting any 
 
+PHP/HTML/Mysql site with 
+a) Data Container for storing the persistent 
+b) Utils container for ssh / backup / any tools you would like to have. 
+
+The containers are hardcoded to map the ports to the Host so right now the way it works , you can host only 1 website per server. This will change in future . You can change mapping inside the ./stdcontainers/startall.sh scripts very easily
+
+#### We have many standard Docker containers which do work independently as well and would help someone setting up apache/nginx/mysql/etc from start.
 
 Standard Containers Available : 
 ##### https://github.com/paimpozhil/dPanel/tree/master/stdcontainers
