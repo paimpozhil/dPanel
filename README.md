@@ -6,20 +6,20 @@ Docker gets many things right where the cPanel fails..
 
 Idea is to :
 
-### Create a simple tool and then a web control panel where you can manage websites on multiple docker hosts.
+#### Create a simple tool and then a web control panel where you can manage websites on multiple docker hosts.
 
-### Create a tool that will allow you to migrate out of cPanel / Plesk to our Docker container environment easily.
+#### Create a tool that will allow you to migrate out of cPanel / Plesk to our Docker container environment easily.
 
 
-## Status for now -- we do not have any web panel yet. just Bash Scripts which will in future serve for API calls/base for this system.
+### Status for now -- we do not have any web panel yet. just Bash Scripts which will in future serve for API calls/base for this system.
 
 These scripts will let you already to create a proper setup for hosting any PHP/HTML website with Mysql backend with a Data Container for storing the persistent / Utils container for ssh / backup / any tools you would like to have. The containers are hardcoded to map the ports to the Host so right now the way it works , you can host only 1 website per server. This will change in future . You can change mapping inside the ./stdcontainers/startall.sh scripts very easily
 
-## We have many standard Docker containers which do work independently as well and would help someone setting up apache/nginx/mysql/etc from start.
+### We have many standard Docker containers which do work independently as well and would help someone setting up apache/nginx/mysql/etc from start.
 
 
 Standard Containers Available : 
-#### https://github.com/paimpozhil/dPanel/tree/master/stdcontainers
+##### https://github.com/paimpozhil/dPanel/tree/master/stdcontainers
 Mysql , Apache PHP , Nginx PHP , Utils
 
 
@@ -48,7 +48,7 @@ Once you get access to this Utils container you can find the SSH key to connect 
 
 
 
-## WHY?
+### WHY?
 
 cPanel/Plesk is not free or Open!.
 
@@ -61,17 +61,19 @@ They do not allow different websites/users to have different versions of softwar
 They take up lot of resources to provide you features you do not require.
 
 
-### Tools about to be used:
+#### Tools about to be used:
 
-#### Frontend: PHP/Mysql over Laravel.
+##### Frontend: PHP/Mysql over Laravel.
 
-#### Reverse Proxy: Nginx (for Multiple sites )
+##### Reverse Proxy: Nginx (for Multiple sites )
 
-#### Backup :
+##### Backup :
 s3fs-fuse :  https://github.com/s3fs-fuse/s3fs-fuse
 
 
 
-## Shut up where is the code?
+### Shut up where is the code?
 
-Im coding that as we speak and I am still finalizing the technologies to be used.. Please join me if you'd like to help ( paimpozhil @ gmail dot com )
+Im coding that as we speak and I Have some scripts that I already use :).
+
+Please join me if you'd like to help ( paimpozhil @ gmail dot com )
