@@ -1,8 +1,6 @@
 #dPanel 
 
-We are creating  a very light weight simple control panel for our own use to migrate 100s of websites hosted on cPanel into Docker based environment.
-
-Docker gets many things right where the cPanel fails.. 
+We are creating  a very light weight simple control panel for our own use to migrate 100s of websites hosted on cPanel into Docker based environment. We are tired of sites in cPanel / Plesk environment getting out of control and bringing down 50 sites with it.
 
 Idea is to :
 
@@ -58,13 +56,9 @@ Once you get access to this Utils container you can find the SSH key to connect 
 ### WHY?
 
 cPanel/Plesk is not free or Open!.
-
 They cause single point of failure, one site can bring down entire servers, one virus can easily kill 100s of sites.  
-
 Migrating sites between servers are a huge pain.
-
 They do not allow different websites/users to have different versions of softwares ex PHP/Mysql easily.
-
 They take up lot of resources to provide you features you do not require.
 
 
@@ -76,7 +70,6 @@ They take up lot of resources to provide you features you do not require.
 
 ##### Backup :
 s3fs-fuse :  https://github.com/s3fs-fuse/s3fs-fuse
-
 
 
 ### Shut up where is the code?
