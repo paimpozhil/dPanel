@@ -1,0 +1,52 @@
+server {
+	listen 80 default;
+
+	server_name localhost;
+
+	root /var/www;
+	index index.html index.htm index.php;
+
+	location / {
+		# First attempt to serve request as file, then as directory;
+		# if missing, pass the URI to Magento's front handler
+		try_files $uri $uri/ @fronthandler;
+	}
+
+	# These locations would be hidden by .htaccess normally
+	location ^~ /app/                { deny all; }
+	location ^~ /includes/           { deny all; }
+	location ^~ /lib/                { deny all; }
+	location ^~ /media/downloadable/ { deny all; }
+	location ^~ /pkginfo/            { deny all; }
+	location ^~ /report/config.xml   { deny all; }
+	location ^~ /var/                { deny all; }
+
+	# Hide hidden files (.htaccess, .htpasswd, .git, etc)
+	location ~ /\. {
+		return 404;
+	}
+
+	# Directs all requests to Magento's index.php
+	location @fronthandler {
+		rewrite / /index.php last;
+	}
+
+	# Forward paths like /js/index.php/x.js to relevant handler
+	location ~ \.php/ {
+		rewrite ^(.+\.php)/ $1 last;
+	}
+
+	# Execute PHP scripts
+	location ~ \.php$ {
+		try_files $uri =404;
+
+		# Do not cache dynamic content
+		expires off;
+
+		# Process requests via PHP-FPM
+		# NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
+		fastcgi_split_path_info ^(.+\.php)(/.+)$;
+		fastcgi_pass php;
+		include fastcgi_params;
+	}
+}

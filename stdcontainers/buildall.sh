@@ -17,3 +17,5 @@ docker build -t stdmysql mysql/.
 docker build -t stdutils utils/.
 
 docker build -t stdapache apachephp/.
+
+docker build -t stdnginxphp53 nginxphp53/.
