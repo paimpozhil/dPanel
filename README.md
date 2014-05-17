@@ -4,7 +4,7 @@ We are creating  a very light weight simple control panel for our own use to mig
 
 Idea is to :
 
-1 . Create a simple tool and then a web control panel where you can manage websites on multiple docker hosts.
+1.  Create a simple tool and then a web control panel where you can manage websites on multiple docker hosts.
 
 2.  Create a tool that will allow you to migrate out of cPanel / Plesk to our Docker container environment easily.
 
