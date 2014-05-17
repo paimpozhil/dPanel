@@ -72,19 +72,3 @@ Migrating sites between servers are a huge pain.
 They do not allow different websites/users to have different versions of softwares ex PHP/Mysql easily.
 They take up lot of resources to provide you features you do not require.
 
-
-#### Tools about to be used:
-
-##### Frontend: PHP/Mysql over Laravel.
-
-##### Reverse Proxy: Nginx (for Multiple sites )
-
-##### Backup :
-s3fs-fuse :  https://github.com/s3fs-fuse/s3fs-fuse
-
-
-### Shut up where is the code?
-
-Im coding that as we speak and I Have some scripts that I already use :).
-
-Please join me if you'd like to help ( paimpozhil @ gmail dot com )
