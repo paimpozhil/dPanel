@@ -14,9 +14,9 @@ Idea is to :
 
 we do not have any web panel yet. just Bash Scripts which will in future serve for API calls/base for this system.
 
-These scripts will let you to create a proper docker setup for hosting any PHP/HTML/Mysql site with 
+These scripts will let you to create a proper docker setup for hosting Many PHP/HTML/Mysql sites in a server with 
 
-a) Data Container for storing the persistent 
+a) Data Container for storing the persistent data like /var/lib/www and /var/www , /data , /backup
 b) Utils container for ssh / backup / any tools you would like to have. 
 
 You can run many website within the same server under different containers with our setup.
@@ -25,11 +25,9 @@ You can run many website within the same server under different containers with 
 
 Standard Containers Available : 
 ##### https://github.com/paimpozhil/dPanel/tree/master/stdcontainers
-Mysql , Apache PHP , Nginx PHP , Utils
-
+Mysql , Apache PHP , Nginx PHP , Utils , NginxPHP53 ( for magento and other old libs)
 
 You can also use dPanel already if you are comfortable with Docker and commandline.
-
 All you need to do is 
 
 ```
