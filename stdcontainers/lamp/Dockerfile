@@ -35,5 +35,5 @@ RUN sed -i "s/UsePAM.*/UsePAM no/g" /etc/ssh/sshd_config
 ADD dpanel_ssh_key.pub /tmp/your_key
 RUN cat /tmp/your_key >> /root/.ssh/authorized_keys && rm -f /tmp/your_key
 
-EXPOSE 80 3306
+EXPOSE 3306 80
 CMD ["/run.sh"]

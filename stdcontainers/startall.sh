@@ -25,7 +25,7 @@ while getopts ":a:dhnupml" opt; do
     nginxphp53=" --link $appname-nginxphp53:nginxphp53"
 	;;
     l)
-	docker run  -e VIRTUAL_HOST=$appname  --name $appname-lamp  --volumes-from $appname -p 80 -p 3306 -d stdlamp 
+	docker run  -e VIRTUAL_HOST=$appname  --name $appname-lamp  --volumes-from $appname  -p 80 -p 3306 -d stdlamp 
 	lamplink=" --link $appname-lamp:lamp"
         ;;
     u)
@@ -33,8 +33,8 @@ while getopts ":a:dhnupml" opt; do
                    ;;
     
     h)
-    echo "startall.sh -a appname -n {fornginx} -d {formysql} -p {forapache} -u {forutils} -m {for php53 }"
-    echo "sample usage ./startall.sh yourwebsite.com -n -d -u"
+    echo "startall.sh -a appname -n {fornginx} -d {formysql} -p {forapache} -u {forutils} -m {for php53 } -l {for lamp}"
+    echo "sample usage ./startall.sh -a yourwebsite.com -n -d -u or ./startall.sh -a yourwebsite -l -u"
 		;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
