@@ -4,18 +4,14 @@ mkdir keys
 
 ssh-keygen -f keys/dpanel-key-$1
 
-for dir in */; do cp keys/dpanel-key-$1.pub "$dir/dpanel_ssh_key.pub"; done
+DIRS=`find  -mindepth 1 -maxdepth 1 -type d -exec basename {} \;`
+
+for dir in $DIRS; do cp keys/dpanel-key-$1.pub "$dir/dpanel_ssh_key.pub"; done
 
 cp -f keys/dpanel-key-$1 utils/dpanel_ssh_key
 
-docker build -t dp-data data/.
+for dir in $DIRS; do
 
-docker build -t stdnginx nginxphp/.
+docker build -t std$dir $dir/.
 
-docker build -t stdmysql mysql/.
-
-docker build -t stdutils utils/.
-
-docker build -t stdapache apachephp/.
-
-docker build -t stdnginxphp53 nginxphp53/.
+done

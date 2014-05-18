@@ -12,6 +12,7 @@ echo "stopping .."
 docker stop $appname-utils
 echo "stopping .."
 docker stop $appname-apache
-
+echo "stopping .."
+docker stop $appname-lamp
 
 echo "all stopped"
