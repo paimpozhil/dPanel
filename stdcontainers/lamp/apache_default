@@ -16,7 +16,7 @@
 
         ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
         <Directory "/usr/lib/cgi-bin">
-                AllowOverride None
+                AllowOverride All
                 Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
                 Order allow,deny
                 Allow from all
