@@ -12,6 +12,6 @@ cp -f keys/dpanel-key-$1 utils/dpanel_ssh_key
 
 for dir in $DIRS; do
 
-docker build -t std$dir $dir/.
+docker build -t img$dir $dir/.
 
 done
