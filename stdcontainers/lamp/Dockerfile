@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:12.04
 MAINTAINER Fernando Mayo <fernando@tutum.co>
 
 # Install packages
@@ -19,11 +19,12 @@ ADD import_sql.sh /import_sql.sh
 ADD create_db.sh /create_db.sh
 RUN chmod 755 /*.sh
 
-RUN sed -i 's/www\/html/www\//g' /etc/apache2/sites-enabled/000-default.conf
 
 # config to enable .htaccess
 ADD apache_default /etc/apache2/sites-available/000-default.conf
 RUN a2enmod rewrite
+
+RUN sed -i 's/www\/html/www\//g' /etc/apache2/sites-available/000-default.conf
 
 
 RUN apt-get install -y openssh-server
