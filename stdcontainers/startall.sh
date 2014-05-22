@@ -25,7 +25,7 @@ while getopts ":a:dhnupmlx" opt; do
     nginxphp53=" --link $appname-nginxphp53:nginxphp53"
 	;;
     l)
-	docker run  -e VIRTUAL_HOST=$appname  --name $appname-lamp  --volumes-from $appname  -p 80 -p 3306 -d imglamp 
+	docker run  -e VIRTUAL_HOST=$appname -e VIRTUAL_PORT=80 --name $appname-lamp  --volumes-from $appname  -p 80 -p 3306 -d imglamp 
 	lamplink=" --link $appname-lamp:lamp"
         ;;
     u)
