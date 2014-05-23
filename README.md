@@ -9,13 +9,15 @@ Idea is to :
 
 ### Status for now -- 
 
-we do not have any web panel yet. just Bash Scripts which will in future serve for API calls/base for this system.
+we have Bash Scripts which will in future serve for API calls/base for this system.
 
 These scripts will let you to create a proper docker setup for hosting Many PHP/HTML/Mysql sites in a server with 
 
-a) Data Container for storing the persistent data like /var/lib/www and /var/www , /data , /backup
-b) Utils container for ssh / backup / any tools you would like to have. 
-c) all related containers properly linked together so they can see/talk .
+##### a) Data Container for storing the persistent data like /var/lib/www and /var/www , /data , /backup
+##### b) Utils container for ssh / backup / any tools you would like to have. 
+##### c) all related containers properly linked together so they can see/talk .
+
+
 
 You can run many website within the same server under different containers on their own Jails with our setup.
 
@@ -43,15 +45,18 @@ chmod a+x *.sh
 
 ./startall.sh -h
 
+## Need ssl? look at https://github.com/paimpozhil/nginx-ssl-reverse-proxy
+
 ```
 
-This will start all 4 containers. (Nginx or Apache / Mysql / Data / Utilities )
+This will start all containers. (Nginx or Apache / Mysql / Data / Utilities )
 
-This starts a Data container on your [name] which holds all your important persistent data.
+Data container on your [name] which holds all your important persistent data., be sure to back the volumes inside it.
 
 This also starts a Utils container which has SSH facility on port random host port ( you can find with Docker ps ) and works ONLY via KEY and it is linked to ALL the containers so you can easily inspect every container/issue commands,etc and use this a general Proxy.
 
 Once you get access to this Utils container you can find the SSH key to connect all other Apache/Nginx/Mysql containers on /root/sshkey if you d like to.
+
 
 
 ### WHY we need this ?
