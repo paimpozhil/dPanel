@@ -18,12 +18,11 @@ These scripts will let you to create a proper docker setup for hosting Many PHP/
 ##### c) all related containers properly linked together so they can see/talk .
 
 
-
 You can run many website within the same server under different containers on their own Jails with our setup.
 
-#### Our standard containers allow you to easily start web/mysql servers with various configuration Nginx-phpFPM, apache with php53, mysql individually,etc. They function independently as well so feel free to use them as necessary.
+#### Our standard containers function independently as well so feel free to use them as necessary.
 
-Standard Containers Available : 
+Standard Containers : 
 ##### https://github.com/paimpozhil/dPanel/tree/master/stdcontainers
 
 You can also use dPanel now with CLI , Panel frontend is WIP.
