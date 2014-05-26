@@ -5,7 +5,7 @@ while getopts ":k:dhnupmlx" opt; do
 
     k)
 	keyname=$OPTARG
-
+	mkdir -p keys
 	ssh-keygen -f keys/$keyname
 
 	DIRS=`find  -mindepth 1 -maxdepth 1 -type d -exec basename {} \;`
