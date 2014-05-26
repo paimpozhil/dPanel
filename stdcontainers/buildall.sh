@@ -13,7 +13,12 @@ while getopts ":k:dhnupmlx" opt; do
 	for dir in $DIRS; do cp keys/$keyname.pub "$dir/dpanel_ssh_key.pub"; done
 
 	cp -f keys/$keyname utils/dpanel_ssh_key
+
+##build the data container without anyones permission lol
+	docker build -t imgdata data/.
+
 	;;
+
 
     d)
 	docker build -t imgmysql mysql/.
