@@ -9,7 +9,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install supervis
     php5-gd \
     php5-mcrypt \
     php5-mhash \
-    php5-mysql
+    php5-mysql \
+    nano
 
 
 # Add image configuration and scripts
@@ -23,6 +24,8 @@ ADD supervisord-apache2.conf /etc/supervisor/conf.d/supervisord-apache2.conf
 # config to enable .htaccess
 ADD apache_default /etc/apache2/sites-available/000-default.conf
 RUN a2enmod rewrite
+RUN a2enmod headers
+RUN a2enmod expires
 
 RUN sed -i 's/www\/html/www\//g' /etc/apache2/sites-available/000-default.conf
 

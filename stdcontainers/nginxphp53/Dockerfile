@@ -12,7 +12,8 @@ RUN apt-get install --assume-yes --quiet \
     php5-gd \
     php5-mcrypt \
     php5-mhash \
-    php5-mysql
+    php5-mysql \
+    nano
 
 ADD . /docker-build
 
