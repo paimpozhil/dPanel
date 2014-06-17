@@ -1,3 +1,5 @@
+
+
 #dPanel 
 
 We are creating  a very light weight simple control panel for our own use to migrate 100s of websites hosted on cPanel into Docker based environment. 
@@ -16,6 +18,10 @@ These scripts will let you to create a proper docker setup for hosting Many PHP/
 ##### a) Data Container for storing the persistent data like /var/lib/www and /var/www , /data , /backup
 ##### b) Utils container for ssh / backup / any tools you would like to have. 
 ##### c) all related containers properly linked together so they can see/talk .
+
+Please look into WhatPanel : 
+https://github.com/paimpozhil/WhatPanel is much more easier to manage & use.
+
 
 
 You can run many website within the same server under different containers on their own Jails with our setup.
