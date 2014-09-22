@@ -1,4 +1,4 @@
-
+#Please look into WhatPanel : https://github.com/paimpozhil/WhatPanel is much more easier to manage & use.
 
 #dPanel 
 
@@ -18,9 +18,6 @@ These scripts will let you to create a proper docker setup for hosting Many PHP/
 ##### a) Data Container for storing the persistent data like /var/lib/www and /var/www , /data , /backup
 ##### b) Utils container for ssh / backup / any tools you would like to have. 
 ##### c) all related containers properly linked together so they can see/talk .
-
-Please look into WhatPanel : 
-https://github.com/paimpozhil/WhatPanel is much more easier to manage & use.
 
 
 
